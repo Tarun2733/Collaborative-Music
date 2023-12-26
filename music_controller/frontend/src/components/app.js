@@ -1,5 +1,9 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
+import Homepage from "./HomePage";
+import RoomJoinPage from "./RoomJoinPage";
+import CreateRoomPage from "./CreateRoomPage";
+
 
 export default class App extends Component {
     constructor(props){
@@ -7,9 +11,14 @@ export default class App extends Component {
     }
 
     render(){
-        return <h1>Testing React Code</h1>;
+        return (<div>
+        <Homepage />
+        <RoomJoinPage />
+        <CreateRoomPage />
+        </div>
+        );
     }
 }
 
 const appDiv = document.getElementById("app");
-ReactDOM.render (<App />, appDiv);
+render (<App />, appDiv);
